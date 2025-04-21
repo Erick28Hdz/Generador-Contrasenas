@@ -55,7 +55,3 @@ body {
     text-align: center;
   }
   
-  #download-section {
-    display: flex;
-    justify-content: space-around;
-  }

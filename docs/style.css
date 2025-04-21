@@ -56,6 +56,6 @@ body {
   }
   
   #download-section {
-    margin: 0 auto;
-    width: auto;
+    display: flex;
+    justify-content: space-around;
   }

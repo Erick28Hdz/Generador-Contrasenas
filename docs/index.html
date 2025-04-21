@@ -1,51 +1,47 @@
 <!DOCTYPE html>
-<html lang="es"> <!-- Define el idioma principal del documento como español -->
+<html lang="es">
 <head>
-  <meta charset="UTF-8"> <!-- Configura la codificación de caracteres para admitir tildes y caracteres especiales -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace el diseño adaptable en móviles -->
-  <title>Generador de Contraseñas</title> <!-- Título que aparece en la pestaña del navegador -->
-  <link rel="stylesheet" href="style.css"> <!-- Enlaza el archivo de estilos externo -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Contraseñas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container"> <!-- Contenedor principal de la aplicación -->
+  <div class="container">
 
-    <!-- Título principal de la aplicación -->
     <h1>🔐 Generador de Contraseñas</h1>
 
-    <!-- Campo para definir la longitud de la contraseña -->
     <label>Longitud: 
       <input type="number" id="length" min="8" max="64" value="12">
-      <!-- Campo numérico con valor mínimo de 8 y máximo de 64 caracteres -->
     </label>
     
-    <!-- Sección con opciones de configuración -->
     <div class="checks">
       <label><input type="checkbox" id="uppercase" checked> Mayúsculas</label>
-      <!-- Opción para incluir letras mayúsculas -->
       <label><input type="checkbox" id="lowercase" checked> Minúsculas</label>
-      <!-- Opción para incluir letras minúsculas -->
       <label><input type="checkbox" id="numbers" checked> Números</label>
-      <!-- Opción para incluir dígitos numéricos -->
       <label><input type="checkbox" id="symbols"> Símbolos</label>
-      <!-- Opción para incluir caracteres especiales como !@#$% -->
       <label><input type="checkbox" id="no-ambiguous"> Evitar caracteres ambiguos</label>
-      <!-- Opción para excluir caracteres visualmente parecidos como O, 0, I, l -->
     </div>
 
-    <!-- Botón que ejecuta la función para generar la contraseña -->
     <button onclick="generatePassword()">Generar</button>
 
-    <!-- Área donde se muestra la contraseña generada -->
     <div id="result-box">
       <p id="result">Tu contraseña aparecerá aquí</p>
-      <!-- Aquí se insertará dinámicamente la contraseña generada -->
       <button onclick="copyToClipboard()">📋 Copiar</button>
-      <!-- Botón para copiar la contraseña al portapapeles -->
+    </div>
+
+    <!-- Botón para descargar el archivo comprimido -->
+    <div id="download-section">
+      <a href="https://github.com/Erick28Hdz/Generador-Contrasenas/raw/main/docs/Generador-Contrasenas.zip" download>
+        <button>📥 Descargar Generador ZIP</button>
+      </a>
+      <a href="https://github.com/Erick28Hdz/Generador-Contrasenas/raw/main/docs/Generador-Contrasenas.rar" download>
+        <button>📥 Descargar Generador RAR</button>
+      </a>
     </div>
 
   </div>
 
-  <!-- Enlace al archivo JavaScript que contiene la lógica del generador -->
   <script src="app.js"></script>
 </body>
 </html>

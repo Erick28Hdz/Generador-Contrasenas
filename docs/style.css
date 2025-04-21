@@ -55,3 +55,7 @@ body {
     text-align: center;
   }
   
+  #download-section {
+    margin: 0 auto;
+    width: auto;
+  }

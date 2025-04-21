@@ -1,7 +1,7 @@
 {
     "name": "Generador de Contraseñas",
     "short_name": "Generador",
-    "start_url": "./index.html",
+    "start_url": "/Generador-Contrasenas/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#4a90e2",
@@ -18,3 +18,4 @@
       }
     ]
   }
+  

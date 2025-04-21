@@ -2,13 +2,13 @@ self.addEventListener('install', e => {
     e.waitUntil(
       caches.open('pwacache').then(cache => {
         return cache.addAll([
-          './',
-          './index.html',
-          './style.css',
-          './app.js',
-          './manifest.json',
-          './icon-192.png',
-          './icon-512.png'
+          '/docs/',             // Cambiar la ruta raíz
+          '/docs/index.html',   // Ruta completa a index.html
+          '/docs/style.css',
+          '/docs/app.js',
+          '/docs/manifest.json',
+          '/docs/icon-192.png',
+          '/docs/icon-512.png'
         ]);
       })
     );

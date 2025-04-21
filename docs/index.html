@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generador de Contraseñas</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4A90E2">
+
+  <!-- Íconos para dispositivos -->
+  <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="icon-512.png">
 </head>
 <body>
   <div class="container">
-
     <h1>🔐 Generador de Contraseñas</h1>
 
-    <label>Longitud: 
+    <label>Longitud:
       <input type="number" id="length" min="8" max="64" value="12">
     </label>
-    
+
     <div class="checks">
       <label><input type="checkbox" id="uppercase" checked> Mayúsculas</label>
       <label><input type="checkbox" id="lowercase" checked> Minúsculas</label>
@@ -32,5 +37,16 @@
   </div>
 
   <script src="app.js"></script>
+
+  <!-- Registro del Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log("✅ Service Worker registrado"))
+          .catch(err => console.error("❌ Error al registrar SW", err));
+      });
+    }
+  </script>
 </body>
 </html>

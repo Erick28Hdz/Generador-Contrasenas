@@ -1,0 +1,57 @@
+:root {
+    --primario-color: #000000;
+    --secundario-color: #222222;
+    --terciario-color: #1DCD9F;
+    --cuaternario-color: #169976; 
+}
+body {
+    font-family: Arial, sans-serif;
+    background: var(--primario-color);
+    color: var(--primario-color);
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  .container {
+    background: var(--terciario-color);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--cuaternario-color);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="number"] {
+    width: 80px;
+    margin-left: 10px;
+  }
+  
+  .checks label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  button {
+    background-color: var(--secundario-color);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  #result-box {
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--cuaternario-color);
+    border-radius: 8px;
+    text-align: center;
+  }
+  

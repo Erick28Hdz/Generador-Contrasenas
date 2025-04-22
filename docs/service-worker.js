@@ -1,8 +1,7 @@
 self.addEventListener('install', e => {
     e.waitUntil(
       caches.open('pwacache').then(cache => {
-        return cache.addAll([
-          '/docs/',             // Cambiar la ruta raíz
+        return cache.addAll([           // Cambiar la ruta raíz
           '/docs/index.html',   // Ruta completa a index.html
           '/docs/style.css',
           '/docs/app.js',
